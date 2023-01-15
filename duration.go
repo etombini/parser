@@ -75,12 +75,12 @@ var unitMap = map[string]int64{
 	"w":  7 * 24 * int64(time.Hour),
 }
 
-// ParseDuration parses a duration string.
+// Duration parses a duration string.
 // A duration string is a possibly signed sequence of
 // decimal numbers, each with optional fraction and a unit suffix,
 // such as "300ms", "-1.5h" or "2h45m".
 // Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h".
-func ParseDuration(s string) (time.Duration, error) {
+func Duration(s string) (time.Duration, error) {
 	// [-+]?([0-9]*(\.[0-9]*)?[a-z]+)+
 	orig := s
 	var d int64

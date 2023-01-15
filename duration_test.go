@@ -76,7 +76,7 @@ func TestParseDuration(t *testing.T) {
 	}
 
 	for _, ft := range flagtests {
-		d, err := ParseDuration(ft.expression)
+		d, err := Duration(ft.expression)
 		if ft.expectedErr && err == nil {
 			t.Errorf("%s: expecting an error\n", ft.name)
 		}
